@@ -1,0 +1,16 @@
+{
+  "name": "panda_bot",
+  "version": "1.0.0",
+  "description": "a bot that posts pandas",
+  "main": "bot.js",
+  "dependencies": {
+    "twit": "^2.2.9",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tom Shaw",
+  "license": "ISC"
+}
