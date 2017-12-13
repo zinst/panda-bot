@@ -7,7 +7,7 @@ var path = require('path');
 var config = require('./config');
 var T = new Twit(config);
 
-function randomimage(images){
+function selectImage(images){
 	return images[Math.floor(Math.random() * images.length)];
 }
 
@@ -22,14 +22,14 @@ fs.readdir(__dirname + '/images', function(err, files) {
     });
 
     setInterval(function(){
-      upload_random_image(images);
-    }, 43200000);
+      uploadImage(images);
+    }, 1000 * 43200);
   }
 });
 
-function upload_random_image(images){
+function uploadImage(images){
   console.log('Opening an image...');
-  var image_path = path.join(__dirname, '/images/' + randomimage(images)),
+  var image_path = path.join(__dirname, '/images/' + selectImage(images)),
       b64content = fs.readFileSync(image_path, { encoding: 'base64' });
 
   console.log('Uploading an image...');
